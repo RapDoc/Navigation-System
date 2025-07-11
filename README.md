@@ -16,6 +16,7 @@ A voice-enabled assistant that helps users navigate inside Walmart stores from o
 
 ## 🛠️ Tech Stack
 
+- **Frontend**: React
 - **Backend**: Python, FastAPI (or Flask)
 - **Speech Input**: `speech_recognition`, `pyaudio`
 - **Text-to-Speech**: `gTTS`, `pydub`
