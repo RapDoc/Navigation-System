@@ -2,6 +2,14 @@ from flask import Flask, render_template, request, flash, session, url_for
 import os, time, json
 from collections import deque
 import re
+import spacy
+from spacy.cli import download
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 from utils.nlp_processor import extract_entities
 from utils.store_mapping import shelf_position, entrance_position, find_product_location, store_grid
